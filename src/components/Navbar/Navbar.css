@@ -1,0 +1,28 @@
+.navbar {
+    float: left;
+    width: 100%;
+    display: flex;
+}
+
+.container-logo{
+    width: 100px;;
+}
+
+.container-logo img {
+    width: 100%;
+}
+
+.appbar{
+    background: none;
+    box-shadow: none;
+}
+ul li {
+    margin-right: 10px;
+}
+
+button {
+    text-transform: none;
+    font-weight: 400;
+    font-size: 16px;
+    color: black;
+}
