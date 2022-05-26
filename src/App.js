@@ -1,6 +1,6 @@
 import { Container } from "@mui/material";
 import "./App.css";
-import CardList from "./components/CardList/CardList";
+import CardListContainer from "./components/CardListContainer/CardListContainer";
 
 import Navbar from "./components/Navbar/Navbar";
 
@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Container>
-        <CardList/>
+        <CardListContainer/>
       </Container>
     </div>
   );
