@@ -12,12 +12,12 @@ const CardList = ({products}) => {
 
           return (
             <Grid item md={4} key={id}>
-              <ItemCard
+              {/* <ItemCard
                 title={title}
                 price={price}
                 image={image}
                 stock={stock}
-              />
+              /> */}
             </Grid>
           );
         })}
