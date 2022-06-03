@@ -68,3 +68,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+El nombre de mi emprendimiento es Fresh Coffee, se trata de una tienda de café dónde cada uno puede elegir su bebida favorita, como así también el tamaño de la misma
+
+Librerías usadas: React-Material UI
