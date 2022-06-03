@@ -1,29 +1,32 @@
 .navbar {
-    float: left;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  float: left;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-.container-logo{
-    width: 100px;;
+.container-logo {
+  width: 100px;
 }
 
 .container-logo img {
-    width: 100%;
+  width: 100%;
 }
 
-.appbar{
-    background: none;
-    box-shadow: none;
+.appbar {
+  background: none;
+  box-shadow: none;
 }
+
 ul li {
-    margin-right: 10px;
+  margin-right: 10px;
+  list-style: none;
 }
 
-button {
-    text-transform: none;
-    font-weight: 400;
-    font-size: 16px;
-    color: black;
+.navbar .navbar_btn {
+  font-family: "Lato", sans-serif;
+  text-transform: none;
+  font-weight: 400;
+  font-size: 16px;
+  color: black;
 }

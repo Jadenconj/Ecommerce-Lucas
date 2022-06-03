@@ -1,5 +1,4 @@
 import { Button } from "@mui/material";
-import { useState } from "react";
 
 const ItemCount = (props) => {
   const { onAdd, count } = props;

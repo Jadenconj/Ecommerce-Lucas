@@ -24,3 +24,7 @@
   width: 100%;
   justify-content: center;
 }
+
+.button-detail {
+  background-color: rgb(240, 240, 54);
+}

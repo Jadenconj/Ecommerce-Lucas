@@ -5,7 +5,6 @@ import CardList from "../CardList/CardList";
 const CardListContainer = (props) => {
   const [products, setProducts] = useState([]);
 
-
   const getProducts = () => {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -20,7 +19,7 @@ const CardListContainer = (props) => {
         setProducts(res);
       })
       .catch((err) => {
-        console.log("fallo llamada");
+        console.log(err);
       })
       .finally(() => {});
   }, []);

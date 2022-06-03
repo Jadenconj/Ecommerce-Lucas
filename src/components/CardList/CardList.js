@@ -1,23 +1,21 @@
-import { Grid } from "@mui/material";
 import ItemCard from "../Card/Card";
+import { Grid } from "@mui/material";
 
-const CardList = ({products}) => {
+const CardList = ({ title, products }) => {
   return (
     <>
-      <h1>Productos Recomendados</h1>
-
-      <Grid container spacing={3}>
-        {products.map((producto) => {
-          const { title, price, image, stock, id } = producto;
-
+      <h2>{title}</h2>
+      <Grid container spacing={2}>
+        {products.map(({ title, price, image, id, stock }) => {
           return (
             <Grid item md={4} key={id}>
-              {/* <ItemCard
+              <ItemCard
                 title={title}
                 price={price}
                 image={image}
                 stock={stock}
-              /> */}
+                id={id}
+              />
             </Grid>
           );
         })}
