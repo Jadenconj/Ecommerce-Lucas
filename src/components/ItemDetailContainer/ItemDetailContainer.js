@@ -8,17 +8,17 @@ const ItemDetailContainer = () => {
   const navigate = useNavigate();
   const [product, setProduct] = useState({});
 
+  const productFilter = productos.find((product) => {
+    return product.id === id;
+  });
+
   useEffect(() => {
     if (productFilter === undefined) {
       navigate("/NotFound");
     } else {
       setProduct(productFilter);
     }
-  }, [id]);
-
-  const productFilter = productos.find((product) => {
-    return product.id == id;
-  });
+  }, [productFilter, navigate]);
 
   return (
     <>

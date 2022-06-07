@@ -2,9 +2,13 @@ import { useState } from "react";
 import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
 import "./ItemDetail.css";
+import ItemCount from "../ItemCount/ItemCount";
+import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const ItemDetail = ({ data }) => {
   const [size, setSize] = useState("");
+  const [showButton, setShowButton] = useState(false);
 
   const handleChange = (event) => {
     setSize(event.target.value);
@@ -33,6 +37,13 @@ const ItemDetail = ({ data }) => {
           <MenuItem value={"mediano"}>Mediano</MenuItem>
           <MenuItem value={"grande"}>Grande</MenuItem>
         </Select>
+        {!showButton ? (
+          <ItemCount stock={data.stock} setShowButton={setShowButton} />
+        ) : (
+          <Button>
+            <Link to="/cart"> Finalizar Compra</Link>
+          </Button>
+        )}
       </div>
     </div>
   );

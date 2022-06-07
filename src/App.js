@@ -2,6 +2,7 @@ import { Container } from "@mui/material";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
+import Cart from "./pages/Cart";
 import Contacto from "./pages/Contacto";
 import Detail from "./pages/Detail";
 import Home from "./pages/Home";
@@ -21,6 +22,7 @@ function App() {
             <Route path="/products/:category" element={<ProductList />} />
             <Route path="/nosotros" element={<Nosotros />} />
             <Route path="/contacto" element={<Contacto />} />
+            <Route path="/cart" element={<Cart />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Container>
