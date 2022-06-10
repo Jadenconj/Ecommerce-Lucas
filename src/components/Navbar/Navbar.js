@@ -2,9 +2,12 @@ import "./Navbar.css";
 import { AppBar, Button, Menu, MenuItem, Toolbar } from "@mui/material";
 import CartWidget from "../CartWidget/CartWidget";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import ThemeSwitch from "./ThemeSwitch";
+import { ThemeContext } from "../../context/ThemeContext";
 
 const Navbar = () => {
+  const {darkTheme} = useContext(ThemeContext);
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -17,7 +20,7 @@ const Navbar = () => {
   const categories = ["cafe", "frappuccino", "te"];
 
   return (
-    <AppBar position="static" className="appbar">
+    <AppBar position="static" className={`appbar ${darkTheme ? 'dark-mode' : ''}`}>
       <Toolbar>
         <div className="container-logo">
           <Link to="/">
@@ -61,7 +64,9 @@ const Navbar = () => {
               {categories.map((cat, i) => {
                 return (
                   <MenuItem key={i} onClick={handleClose}>
-                    <Link key={i} to={`/products/${cat}`}>{cat}</Link>
+                    <Link key={i} to={`/products/${cat}`}>
+                      {cat}
+                    </Link>
                   </MenuItem>
                 );
               })}
@@ -88,6 +93,7 @@ const Navbar = () => {
             </Button>
           </li>
         </ul>
+        <ThemeSwitch />
         <CartWidget />
       </Toolbar>
     </AppBar>

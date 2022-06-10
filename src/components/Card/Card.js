@@ -1,12 +1,16 @@
 import "./Card.css";
 import { Card, CardContent, Button } from "@mui/material";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { ThemeContext } from "../../context/ThemeContext";
 
 const ItemCard = ({ title, price, image, id }) => {
+
+  const {darkTheme} = useContext(ThemeContext)
   return (
     <Card sx={{ minWidth: 275 }}>
-      <CardContent>
-        <div className="item-card">
+      <CardContent className={`item-card ${darkTheme ? 'dark-mode' : ''}`}>
+        <div>
           <div>
             <img src={`../${image}`} alt="" />
           </div>

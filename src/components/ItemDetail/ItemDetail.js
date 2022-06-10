@@ -38,7 +38,7 @@ const ItemDetail = ({ data }) => {
           <MenuItem value={"grande"}>Grande</MenuItem>
         </Select>
         {!showButton ? (
-          <ItemCount stock={data.stock} setShowButton={setShowButton} />
+          <ItemCount data={data} setShowButton={setShowButton} />
         ) : (
           <Button>
             <Link to="/cart"> Finalizar Compra</Link>

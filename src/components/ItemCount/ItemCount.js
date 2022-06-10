@@ -1,10 +1,16 @@
 import { Button } from "@mui/material";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import {CartContext} from "../../context/CartContext";
 
-const ItemCount = ({ stock, setShowButton}) => {
+
+
+const ItemCount = ({ data, setShowButton}) => {
+
+  const {addProductToCart} = useContext(CartContext)
   const [count, setCount] = useState(1);
+
   const addcount = () => {
-    if (count < stock) {
+    if (count < data.stock) {
       setCount(count + 1);
     }
   };
@@ -26,6 +32,7 @@ const ItemCount = ({ stock, setShowButton}) => {
         <Button
           onClick={() => {
             setShowButton(true);
+            addProductToCart({data});
           }}
         >
           Agregar al carrito

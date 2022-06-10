@@ -40,3 +40,7 @@
 .container-items div {
   justify-content: space-between;
 }
+
+.dark-mode {
+  background-color: rgb(32, 32, 32);
+}
